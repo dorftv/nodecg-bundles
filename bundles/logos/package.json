@@ -1,0 +1,77 @@
+{
+  "name": "logos",
+  "version": "0.0.0",
+  "description": "",
+  "homepage": "",
+  "author": {
+    "name": "",
+    "email": "",
+    "url": ""
+  },
+  "files": [
+    "dashboard",
+    "graphics",
+    "extension"
+  ],
+  "keywords": [
+    "",
+    "nodecg-bundle"
+  ],
+  "nodecg": {
+    "compatibleRange": "^2.0.0",
+    "dashboardPanels": [
+      {
+        "name": "logo",
+        "title": "Logo",
+        "width": 2,
+        "file": "logo.html",
+        "headerColor": "#525F78"
+      },
+      {
+        "name": "live",
+        "title": "Live Logo",
+        "width": 2,
+        "file": "livelogo.html",
+        "headerColor": "#525F78"
+      }
+    ],
+    "graphics": [
+      {
+        "file": "logo.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": false
+      },
+      {
+        "file": "livelogo.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": false
+      }
+
+    ],
+"assetCategories": [
+            {
+                "name": "Logo",
+                "title": "Logo",
+                "allowedTypes": [
+                    "jpg",
+                    "jpeg",
+                    "gif",
+                    "png"
+                ]
+            },
+            {
+                "name": "Live",
+                "title": "Live Logo",
+                "allowedTypes": [
+                    "jpg",
+                    "jpeg",
+                    "gif",
+                    "png"
+                ]
+            }
+        ]
+  },
+  "license": "Apache-2.0"
+}

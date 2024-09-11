@@ -1,0 +1,10 @@
+services:
+  nodecg:
+    build:
+      context: .
+    volumes:
+      - ./bundles:/nodecg/bundles
+      - ./assets:/nodecg/assets
+    ports:
+      - 9090:9090
+

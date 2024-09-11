@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 16px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+#previewContainer {
+    width: 100%;
+    padding-top: 56.25%;
+    position: relative;
+    border: 2px solid #333;
+    margin-bottom: 15px;
+}
+
+#logo-preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    object-fit: contain;
+}
+
+#submitButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none;
+    box-sizing: border-box;
+}
