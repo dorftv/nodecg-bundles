@@ -2,7 +2,10 @@ FROM node:18
 
 USER root
 
+
 WORKDIR /nodecg
+
+COPY ./bundles /nodecg/bundles
 
 RUN npm install -g \
     npm@latest \
@@ -15,5 +18,7 @@ RUN nodecg setup
 
 # remove when https://github.com/nodecg/nodecg/issues/746 is fixed
 RUN npm install cheerio@1.0.0-rc.12
+
+
 
 CMD ["nodejs", "index.js"]
