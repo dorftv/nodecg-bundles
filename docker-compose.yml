@@ -3,8 +3,7 @@ services:
     build:
       context: .
     volumes:
-      - ./bundles:/nodecg/bundles
-      - ./assets:/nodecg/assets
+      - ./bundles:/opt/nodecg/bundles
+      - ./assets:/opt/nodecg/assets
     ports:
       - 9090:9090
-

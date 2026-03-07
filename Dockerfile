@@ -1,24 +1,14 @@
 FROM node:18
 
-USER root
+WORKDIR /opt/nodecg
 
+RUN git clone https://github.com/nodecg/nodecg.git . \
+    && git checkout v2.5.3 \
+    && npm ci \
+    && npm run build
 
-WORKDIR /nodecg
+COPY ./bundles /opt/nodecg/bundles
 
-COPY ./bundles /nodecg/bundles
+EXPOSE 9090
 
-RUN npm install -g \
-    npm@latest \
-    nodecg-cli@latest \
-    yo@latest \
-    generator-nodecg@latest
-
-
-RUN nodecg setup
-
-# remove when https://github.com/nodecg/nodecg/issues/746 is fixed
-RUN npm install cheerio@1.0.0-rc.12
-
-
-
-CMD ["nodejs", "index.js"]
+CMD ["node", "index.js"]

@@ -8,20 +8,33 @@
 </head>
 <body>
     <div class="container">
-        <input type="text" id="title-input" placeholder="Enter title">
-        <textarea id="subtitle-input" placeholder="Enter subtitle (multi-line supported)" rows="3"></textarea>
-        <div class="color-pickers">
-            <div class="color-picker">
-                <label for="bg-color">BG:</label>
-                <div id="bg-color" class="color-swatch"></div>
-                <input type="color" id="bg-color-input" class="hidden-input">
+        <input type="text" id="title-input" placeholder="Title">
+        <textarea id="subtitle-input" placeholder="Subtitle (multi-line)" rows="5"></textarea>
+
+        <div class="row">
+            <div class="align-toggle">
+                <button id="align-left" class="align-btn" title="Left">&#9664;</button>
+                <button id="align-right" class="align-btn active" title="Right">&#9654;</button>
             </div>
-            <div class="color-picker">
-                <label for="text-color">Text:</label>
-                <div id="text-color" class="color-swatch"></div>
-                <input type="color" id="text-color-input" class="hidden-input">
+            <div class="color-pickers">
+                <div class="color-picker">
+                    <label>BG</label>
+                    <div id="bg-color" class="color-swatch"></div>
+                    <input type="color" id="bg-color-input" class="hidden-input">
+                </div>
+                <div class="color-picker">
+                    <label>Text</label>
+                    <div id="text-color" class="color-swatch"></div>
+                    <input type="color" id="text-color-input" class="hidden-input">
+                </div>
+                <div class="color-picker">
+                    <label>Accent</label>
+                    <div id="accent-color" class="color-swatch"></div>
+                    <input type="color" id="accent-color-input" class="hidden-input">
+                </div>
             </div>
         </div>
+
         <div class="button-container">
             <button id="send-button">Send</button>
             <button id="clear-button">Clear</button>

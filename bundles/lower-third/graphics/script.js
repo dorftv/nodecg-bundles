@@ -4,17 +4,14 @@ const subtitleContainer = document.getElementById('subtitle-container');
 
 const titleReplicant = nodecg.Replicant('displayTitle', { defaultValue: '' });
 const subtitleReplicant = nodecg.Replicant('displaySubtitle', { defaultValue: '' });
-const bgColorReplicant = nodecg.Replicant('bgColor', { defaultValue: '#000000' });
-const textColorReplicant = nodecg.Replicant('textColor', { defaultValue: '#FFFFFF' });
+const bgColorReplicant = nodecg.Replicant('bgColor', { defaultValue: '#0a0a12' });
+const textColorReplicant = nodecg.Replicant('textColor', { defaultValue: '#ffffff' });
+const accentColorReplicant = nodecg.Replicant('accentColor', { defaultValue: '#ff3c6f' });
+const alignReplicant = nodecg.Replicant('align', { defaultValue: 'right' });
 
-function updateLowerThirdVisibility() {
-    const hasTitleContent = titleContainer.textContent.trim() !== '';
-    const hasSubtitleContent = subtitleContainer.textContent.trim() !== '';
-
-    titleContainer.classList.toggle('has-content', hasTitleContent);
-    subtitleContainer.classList.toggle('has-content', hasSubtitleContent);
-
-    if (hasTitleContent || hasSubtitleContent) {
+function updateVisibility() {
+    const has = titleContainer.textContent.trim() || subtitleContainer.textContent.trim();
+    if (has) {
         lowerThird.classList.remove('hide');
         lowerThird.classList.add('show');
     } else {
@@ -23,20 +20,25 @@ function updateLowerThirdVisibility() {
     }
 }
 
-titleReplicant.on('change', (newValue) => {
-    titleContainer.textContent = newValue;
-    updateLowerThirdVisibility();
+titleReplicant.on('change', (v) => { titleContainer.textContent = v; updateVisibility(); });
+subtitleReplicant.on('change', (v) => { subtitleContainer.textContent = v; updateVisibility(); });
+
+bgColorReplicant.on('change', (v) => {
+    const r = parseInt(v.slice(1, 3), 16);
+    const g = parseInt(v.slice(3, 5), 16);
+    const b = parseInt(v.slice(5, 7), 16);
+    document.documentElement.style.setProperty('--bg-color', `rgba(${r}, ${g}, ${b}, 0.78)`);
 });
 
-subtitleReplicant.on('change', (newValue) => {
-    subtitleContainer.textContent = newValue;
-    updateLowerThirdVisibility();
+textColorReplicant.on('change', (v) => {
+    document.documentElement.style.setProperty('--text-color', v);
 });
 
-bgColorReplicant.on('change', (newValue) => {
-    document.documentElement.style.setProperty('--bg-color', newValue);
+accentColorReplicant.on('change', (v) => {
+    document.documentElement.style.setProperty('--accent-color', v);
 });
 
-textColorReplicant.on('change', (newValue) => {
-    document.documentElement.style.setProperty('--text-color', newValue);
+alignReplicant.on('change', (v) => {
+    lowerThird.classList.remove('align-left', 'align-right');
+    lowerThird.classList.add('align-' + v);
 });
