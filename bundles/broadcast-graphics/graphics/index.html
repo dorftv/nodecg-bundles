@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broadcast Graphics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Clock -->
+    <div id="clock">
+        <!-- Digital -->
+        <span id="clk-digital" class="clk-face"></span>
+
+        <!-- Analog -->
+        <div id="clk-analog" class="clk-face">
+            <svg id="clk-svg" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="48" class="clk-dial"/>
+                <line id="clk-hand-h" class="clk-hand-h" x1="50" y1="50" x2="50" y2="26"/>
+                <line id="clk-hand-m" class="clk-hand-m" x1="50" y1="50" x2="50" y2="16"/>
+                <line id="clk-hand-s" class="clk-hand-s" x1="50" y1="50" x2="50" y2="12"/>
+                <circle cx="50" cy="50" r="2.5" class="clk-center"/>
+            </svg>
+        </div>
+
+        <!-- Minimal -->
+        <span id="clk-minimal" class="clk-face"></span>
+    </div>
+
+    <!-- Lower Third -->
+    <div id="lower-third" class="align-right style-classic">
+        <div id="lt-tag-block"><span id="lt-tag-text"></span></div>
+        <div id="lt-body">
+            <div id="lt-accent-bar"></div>
+            <div id="lt-content">
+                <div id="lt-title-block"><span id="lt-title-text"></span></div>
+                <div id="lt-subtitle-block"><span id="lt-subtitle-text"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Crawl -->
+    <div id="marquee-bar">
+        <div id="mq-accent"></div>
+        <div id="mq-track">
+            <div id="mq-content"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

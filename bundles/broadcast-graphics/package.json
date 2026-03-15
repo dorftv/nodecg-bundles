@@ -1,5 +1,5 @@
 {
-  "name": "lower-third",
+  "name": "broadcast-graphics",
   "version": "1.0.0",
   "nodecg": {
     "compatibleRange": "^2.0.0",
@@ -8,7 +8,21 @@
         "name": "lower-third-control",
         "title": "Lower Third",
         "width": 2,
-        "file": "index.html",
+        "file": "lower-third.html",
+        "headerColor": "#525F78"
+      },
+      {
+        "name": "crawl-control",
+        "title": "Crawl",
+        "width": 2,
+        "file": "marquee.html",
+        "headerColor": "#525F78"
+      },
+      {
+        "name": "clock-control",
+        "title": "Clock",
+        "width": 2,
+        "file": "clock.html",
         "headerColor": "#525F78"
       }
     ],

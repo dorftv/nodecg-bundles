@@ -8,8 +8,19 @@
 </head>
 <body>
     <div class="container">
-        <input type="text" id="title-input" placeholder="Title">
-        <textarea id="subtitle-input" placeholder="Subtitle (multi-line)" rows="5"></textarea>
+        <div class="row">
+            <select id="style-select">
+                <option value="classic">Classic</option>
+                <option value="twotone">Two-Tone</option>
+                <option value="staggered">Staggered</option>
+                <option value="wipe">Wipe</option>
+                <option value="tag">Tag Label</option>
+            </select>
+        </div>
+
+        <input type="text" id="tag-input" placeholder="Tag label (e.g. LIVE, INTERVIEW)">
+        <input type="text" id="title-input" placeholder="Name / Title">
+        <textarea id="subtitle-input" placeholder="Description (multi-line)" rows="3"></textarea>
 
         <div class="row">
             <div class="align-toggle">
@@ -35,11 +46,11 @@
             </div>
         </div>
 
-        <div class="button-container">
-            <button id="send-button">Send</button>
-            <button id="clear-button">Clear</button>
+        <div class="button-row">
+            <button id="lt-toggle" class="toggle-btn">Show</button>
+            <button id="lt-clear" class="clear-btn">Clear</button>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="lower-third.js"></script>
 </body>
 </html>

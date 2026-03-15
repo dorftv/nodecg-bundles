@@ -10,6 +10,18 @@ body {
     max-width: 100%;
 }
 
+select {
+    width: 100%;
+    padding: 6px 8px;
+    margin-bottom: 6px;
+    box-sizing: border-box;
+    background: #1e2432;
+    border: 1px solid #3a4660;
+    color: #e0e0e0;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
 input[type="text"], textarea {
     width: 100%;
     padding: 6px 8px;
@@ -31,6 +43,25 @@ input[type="text"]::placeholder, textarea::placeholder {
     align-items: center;
     gap: 12px;
     margin-bottom: 8px;
+}
+
+.field {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.field label {
+    font-size: 10px;
+    color: #889;
+    flex-shrink: 0;
+}
+
+.field input[type="range"] {
+    flex: 1;
+    height: 4px;
+    accent-color: #e5243b;
 }
 
 .align-toggle {
@@ -107,12 +138,45 @@ input[type="text"]::placeholder, textarea::placeholder {
     opacity: 0.85;
 }
 
-#send-button {
-    background: #ff3c6f !important;
+.button-row {
+    display: flex;
+    gap: 6px;
+}
+
+.toggle-btn {
+    flex: 1;
+    padding: 6px !important;
+    cursor: pointer;
+    border: none !important;
+    border-radius: 4px !important;
+    font-size: 12px !important;
+    font-weight: 600;
+    transition: background 0.15s, opacity 0.15s;
+    background: #e5243b !important;
     color: white !important;
 }
 
-#clear-button {
+.toggle-btn.is-active {
     background: #3a4660 !important;
     color: #ccc !important;
+}
+
+.toggle-btn:hover {
+    opacity: 0.85;
+}
+
+.clear-btn {
+    padding: 6px 12px !important;
+    cursor: pointer;
+    border: none !important;
+    border-radius: 4px !important;
+    font-size: 12px !important;
+    font-weight: 600;
+    background: #2a1a1e !important;
+    color: #c66 !important;
+    transition: opacity 0.15s;
+}
+
+.clear-btn:hover {
+    opacity: 0.85;
 }

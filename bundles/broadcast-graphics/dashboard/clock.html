@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock Control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <select id="clk-style-select">
+                <option value="digital">Digital</option>
+                <option value="analog">Analog</option>
+                <option value="minimal">Minimal</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <div class="field">
+                <label>Size</label>
+                <input type="range" id="clk-size-input" min="0.8" max="3.0" step="0.1" value="1.5">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="color-pickers">
+                <div class="color-picker">
+                    <label>BG</label>
+                    <div id="clk-bg-color" class="color-swatch"></div>
+                    <input type="color" id="clk-bg-color-input" class="hidden-input">
+                </div>
+                <div class="color-picker">
+                    <label>Text</label>
+                    <div id="clk-text-color" class="color-swatch"></div>
+                    <input type="color" id="clk-text-color-input" class="hidden-input">
+                </div>
+                <div class="color-picker">
+                    <label>Accent</label>
+                    <div id="clk-accent-color" class="color-swatch"></div>
+                    <input type="color" id="clk-accent-color-input" class="hidden-input">
+                </div>
+            </div>
+        </div>
+
+        <button id="clk-toggle" class="toggle-btn">Show</button>
+    </div>
+    <script src="clock.js"></script>
+</body>
+</html>

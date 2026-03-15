@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crawl Control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <textarea id="marquee-input" placeholder="Crawl text (separate items with |)" rows="3"></textarea>
+
+        <div class="row">
+            <div class="field">
+                <label>Speed</label>
+                <input type="range" id="speed-input" min="20" max="200" value="80">
+            </div>
+        </div>
+        <div class="row">
+            <div class="field">
+                <label>Size</label>
+                <input type="range" id="fontsize-input" min="0.6" max="2.5" step="0.1" value="1.1">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="color-pickers">
+                <div class="color-picker">
+                    <label>BG</label>
+                    <div id="mq-bg-color" class="color-swatch"></div>
+                    <input type="color" id="mq-bg-color-input" class="hidden-input">
+                </div>
+                <div class="color-picker">
+                    <label>Text</label>
+                    <div id="mq-text-color" class="color-swatch"></div>
+                    <input type="color" id="mq-text-color-input" class="hidden-input">
+                </div>
+                <div class="color-picker">
+                    <label>Accent</label>
+                    <div id="mq-accent-color" class="color-swatch"></div>
+                    <input type="color" id="mq-accent-color-input" class="hidden-input">
+                </div>
+            </div>
+        </div>
+
+        <div class="button-row">
+            <button id="mq-toggle" class="toggle-btn">Show</button>
+            <button id="mq-clear" class="clear-btn">Clear</button>
+        </div>
+    </div>
+    <script src="marquee.js"></script>
+</body>
+</html>
