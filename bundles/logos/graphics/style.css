@@ -14,7 +14,9 @@ body, html {
     align-items: center;
 }
 
+/* Hidden until a logo is selected and found: an empty <img> draws a frame */
 #logo-display {
+    display: none;
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
